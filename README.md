@@ -36,9 +36,13 @@ The configuration details of each machine may be found below.
 
 Name	Function	IP Address	Operating System
 Jump-Box-P	Gateway	Private: 10.0.0.4 // Public: 40.69.163.132	Linux Ubuntu 18.04-Its-gen2
+
 Web-1	Server	Private: 10.0.0.5	Linux Ubuntu 18.04-Its-gen2
+
 Web-2	Server	Private: 10.0.0.6	Linux Ubuntu 18.04-Its-gen2
+
 Web-3	Server	Private: 10.0.0.8	Linux Ubuntu 18.04-Its-gen2
+
 ELK-SERVER	Monitoring	Private: 10.1.0.4 // Public: 20.106.226.87	Linux Ubuntu 18.04-Its-gen2
 Access Policies
 The machines on the internal network are not exposed to the public Internet.
