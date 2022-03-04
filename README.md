@@ -7,22 +7,28 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
 Install-elk.yml
+
+
 This document contains the following details:
 
 Description of the Topology
 Access Policies
 ELK Configuration
-Beats in Use
+Beats Used
 Machines Being Monitored
-How to Use the Ansible Build
+Using the Ansible Build
 Description of the Topology
+
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+
 
 Load balancing ensures that the application will be highly accessible, in addition to restricting unwanted and potently malicious traffic to the network.
 
 Load Balancers protect the network from Dos and Ddos attacks. A Jump Box provides a public facing server behind which are the web servers. This reduces the attack surface and increases security.
 
+
 A Jump Box provides a public facing server behind which are the actual web servers. This reduces the attack surface and increases security.
+
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 
@@ -35,6 +41,7 @@ Metricbeat is a lightweight agent that can be installed on target servers to per
 The configuration details of each machine may be found below.
 
 Name	Function	IP Address	Operating System
+
 Jump-Box-P	Gateway	Private: 10.0.0.4 // Public: 40.69.163.132	Linux Ubuntu 18.04-Its-gen2
 
 Web-1	Server	Private: 10.0.0.5	Linux Ubuntu 18.04-Its-gen2
@@ -118,4 +125,5 @@ Which file do you update to make Ansible run the playbook on a specific machine?
 /etc/ansible/hosts
 
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-Within the each yaml file there is a specification, “hosts”, that allows you to dictate where it is to be installed. Here you would indicate “elk” or “webservers”
+Within each yaml file there is a “hosts”, which will allow you to dictate where it is to be installed. This is where you would indicate “elk” or “webservers”
+so they can be install correctly.
