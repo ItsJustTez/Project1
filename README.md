@@ -87,13 +87,17 @@ Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
 Web-1 10.0.0.5 
+
 Web-2 10.0.0.6 
+
 Web-3 10.0.0.8
 
 We have installed the following Beats on these machines:
 
 Filebeat
+
 Metricbeat
+
 These Beats allow us to collect the following information from each machine:
 
 Filebeat collects system log data which can be usefull in many ways such as monitoring when and from when someone attempted to ssh into the jump box.
@@ -101,6 +105,7 @@ Filebeat collects system log data which can be usefull in many ways such as moni
 Metricbeat collects OS and services data from machines running the service. We can use this data to monitor system resources such as memory usage.
 
 Using the Playbook
+
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
@@ -116,14 +121,18 @@ Update the /etc/ansible/hosts file to include:
 Run the playbook, and navigate to "ansible -m ping all" to check that the installation worked as expected.
 
 Which file is the playbook?
+
 Pentest.yml
 
 Where do you copy it?
+
 /etc/ansible/pentest.yml
 
 Which file do you update to make Ansible run the playbook on a specific machine?
+
 /etc/ansible/hosts
 
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+
 Within each yaml file there is a “hosts”, which will allow you to dictate where it is to be installed. This is where you would indicate “elk” or “webservers”
 so they can be install correctly.
